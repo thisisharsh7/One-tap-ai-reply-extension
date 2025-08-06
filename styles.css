@@ -1,0 +1,216 @@
+/**
+ * OneTap Reply Extension Styles - Modern Light UI
+ */
+
+/* Floating Button */
+.onetap-floating-button {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    background: linear-gradient(90deg, #4f8cff 0%, #38c6fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 8px rgba(79, 140, 255, 0.12);
+    transition: box-shadow 0.2s, background 0.2s;
+    z-index: 10000;
+    user-select: none;
+    font-family: inherit;
+}
+
+.onetap-floating-button:hover {
+    background: linear-gradient(90deg, #357ae8 0%, #2ab7ca 100%);
+    box-shadow: 0 4px 16px rgba(79, 140, 255, 0.18);
+}
+
+/* Options Panel */
+.onetap-options-panel {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(79, 140, 255, 0.10);
+    border: 1px solid #e3e8ee;
+    padding: 0;
+    min-width: 240px;
+    z-index: 10001;
+    font-family: inherit;
+    animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Panel Header */
+.onetap-panel-header {
+    background: linear-gradient(90deg, #eaf6ff 0%, #f7fcff 100%);
+    border-bottom: 1px solid #e3e8ee;
+    padding: 10px 16px 8px 16px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.onetap-panel-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #357ae8;
+    margin: 0;
+}
+
+.onetap-close-btn {
+    background: none;
+    border: none;
+    color: #b0b8c1;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 4px;
+    transition: color 0.2s;
+}
+
+.onetap-close-btn:hover {
+    color: #357ae8;
+}
+
+/* Tone Buttons */
+.onetap-tone-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 12px 16px;
+}
+
+.onetap-tone-btn {
+    background: #f5faff;
+    color: #357ae8;
+    border: 1px solid #e3e8ee;
+    border-radius: 7px;
+    padding: 7px 0;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.onetap-tone-btn:hover {
+    background: #eaf6ff;
+    border-color: #4f8cff;
+    color: #2ab7ca;
+}
+
+.tone-icon {
+    font-size: 15px;
+    margin-right: 2px;
+}
+
+.tone-label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Replies Container */
+.onetap-replies-container {
+    padding: 10px 16px 12px 16px;
+}
+
+.onetap-loading {
+    font-size: 13px;
+    color: #b0b8c1;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.onetap-replies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.onetap-reply-item {
+    background: #f7fcff;
+    border-radius: 7px;
+    border: 1px solid #e3e8ee;
+    padding: 7px 10px;
+    font-size: 13px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.onetap-reply-item:hover {
+    background: #eaf6ff;
+    border-color: #4f8cff;
+}
+
+.reply-text {
+    flex: 1;
+    font-size: 13px;
+    color: #2c3e50;
+    margin-right: 8px;
+    white-space: pre-line;
+}
+
+.reply-use-btn {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reply-use-btn:hover {
+    background: #357ae8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .onetap-options-panel {
+        min-width: 200px;
+        right: -10px;
+    }
+
+    .onetap-floating-button {
+        right: 5px;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .onetap-tone-buttons {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 10px 10px;
+    }
+}
+
+/* Remove dark mode override */
+@media (prefers-color-scheme: dark) {
+    /* No override: always use light styles */
+}
